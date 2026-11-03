@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>STACK AUTO | Premium Automobile Dealership</title>
+
+<meta name="description" content="Discover quality automobiles at STACK AUTO. Explore our collection of luxury vehicles, SUVs and sedans.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+:root {
+    --blue: #0879df;
+    --blue-light: #36a0ff;
+    --black: #080b10;
+    --dark: #10151d;
+    --card: #151c26;
+    --white: #ffffff;
+    --gray: #a6afbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8,11,16,0.96);
+
+    border-bottom: 1px solid rgba(8,121,223,0.25);
+
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    min-height: 85px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 175px;
+    height: 65px;
+    object-fit: contain;
+    background: white;
+    border-radius: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--blue-light);
+}
+
+.nav-contact {
+    background: var(--blue);
+    padding: 13px 22px;
+    border-radius: 3px;
+}
+
+.nav-contact:hover {
+    background: var(--blue-light);
+    color: white !important;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+
+    min-height: 690px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(4,8,14,0.96),
+        rgba(4,8,14,0.75),
+        rgba(4,8,14,0.22)
+    ),
+
+    url("images/home.png");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 100px 0;
+}
+
+.hero-label {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 83px);
+    line-height: 1.13;
+}
+
+.hero h1 span {
+    color: var(--blue-light);
+}
+
+.hero-line {
+    width: 80px;
+    height: 4px;
+    background: var(--blue);
+    margin: 28px 0;
+}
+
+.hero p {
+    color: #d0d5df;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 570px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 26px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--blue-light);
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    border: 1px solid var(--blue-light);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: var(--blue);
+}
+
+
+/* =========================
+   TRUST BAR
+========================= */
+
+.trust-bar {
+    background: #111923;
+    border-bottom: 1px solid #26313e;
+    padding: 32px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.trust-item i {
+    color: var(--blue-light);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.trust-item h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.trust-item p {
+    color: var(--gray);
+    font-size: 11px;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading small {
+    color: var(--blue-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px,5vw,46px);
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+
+/* =========================
+   FEATURED VEHICLES
+========================= */
+
+.featured {
+    background: var(--black);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.car-card {
+    background: var(--card);
+    border: 1px solid #27313d;
+    overflow: hidden;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: 0 15px 35px rgba(8,121,223,0.12);
+}
+
+.car-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    background: #202833;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: var(--blue);
+    color: white;
+
+    padding: 8px 13px;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.car-info {
+    padding: 23px;
+}
+
+.car-category {
+    color: var(--blue-light);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.car-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.car-info p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.car-price {
+    color: var(--blue-light);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.car-link {
+    display: block;
+    background: var(--blue);
+    padding: 13px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.car-link:hover {
+    background: var(--blue-light);
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    background: var(--dark);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-image {
+    height: 430px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #27313d;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-content small {
+    color: var(--blue-light);
+    font-weight: 800;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px,4vw,47px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.about-content h2 span {
+    color: var(--blue-light);
+}
+
+.about-content p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 17px;
+}
+
+.about-list {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.about-list li {
+    font-size: 12px;
+    margin-bottom: 13px;
+}
+
+.about-list i {
+    color: var(--blue-light);
+    margin-right: 12px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: var(--black);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #26313e;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   WHY CHOOSE STACK AUTO
+========================= */
+
+.why-us {
+    background: var(--dark);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.feature-box {
+    background: #151c26;
+    border: 1px solid #293442;
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    border-color: var(--blue);
+    transform: translateY(-6px);
+}
+
+.feature-box i {
+    font-size: 35px;
+    color: var(--blue-light);
+    margin-bottom: 20px;
+}
+
+.feature-box h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.feature-box p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+
+    background:
+    linear-gradient(rgba(4,8,14,.90),rgba(4,8,14,.90)),
+    url("images/home.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px,5vw,55px);
+}
+
+.contact h2 span {
+    color: var(--blue-light);
+}
+
+.contact p {
+    color: #c3cbd6;
+    font-size: 13px;
+    margin: 20px 0 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #05080c;
+    padding: 65px 0 20px;
+    border-top: 1px solid #25313f;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+    margin-bottom: 45px;
+}
+
+.footer-logo {
+    width: 175px;
+    background: white;
+    padding: 4px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.footer-grid h3 {
+    color: var(--blue-light);
+    font-size: 12px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-grid p,
+.footer-grid a {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.footer-grid a {
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-grid a:hover {
+    color: var(--blue-light);
+}
+
+.footer-about p {
+    max-width: 350px;
+}
+
+.copyright {
+    border-top: 1px solid #25313f;
+    padding-top: 22px;
+    text-align: center;
+    color: #77818e;
+    font-size: 11px;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 999;
+
+    width: 55px;
+    height: 55px;
+
+    background: #25d366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.4);
+    transition: .3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media(max-width:950px) {
+
+    .car-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+
+}
+
+@media(max-width:700px) {
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .logo img {
+        width: 145px;
+        height: 58px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        background: #10151d;
+
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 590px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+}
+
+@media(max-width:420px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="index.html" class="logo">
+
+<img src="images/logo.png" alt="STACK AUTO Logo">
+
+</a>
+
+
+<button class="menu-btn" id="menuBtn"
+aria-label="Open navigation menu"
+aria-expanded="false">
+
+<i class="fas fa-bars"></i>
+
+</button>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li><a href="index.html" class="active">HOME</a></li>
+
+<li><a href="inventory.html">OUR CARS</a></li>
+
+<li><a href="#about">ABOUT US</a></li>
+
+<li><a href="#gallery">GALLERY</a></li>
+
+<li><a href="#contact" class="nav-contact">CONTACT US</a></li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-label">
+WELCOME TO STACK AUTO
+</div>
+
+<h1>
+Drive Beyond<br>
+The <span>Ordinary.</span>
+</h1>
+
+<div class="hero-line"></div>
+
+<p>
+Discover a world of quality automobiles at STACK AUTO.
+From elegant sedans to premium SUVs, explore vehicles
+selected for different lifestyles and preferences.
+</p>
+
+<div class="hero-buttons">
+
+<a href="inventory.html" class="btn btn-primary">
+EXPLORE OUR CARS <i class="fas fa-arrow-right"></i>
+</a>
+
+<a href="#about" class="btn btn-outline">
+DISCOVER STACK AUTO
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TRUST BAR -->
+
+<section class="trust-bar">
+
+<div class="container trust-grid">
+
+<div class="trust-item">
+
+<i class="fas fa-car"></i>
+
+<h3>Quality Automobiles</h3>
+
+<p>Explore our vehicle collection.</p>
+
+</div>
+
+
+<div class="trust-item">
+
+<i class="fas fa-gem"></i>
+
+<h3>Premium Selection</h3>
+
+<p>Vehicles for different preferences.</p>
+
+</div>
+
+
+<div class="trust-item">
+
+<i class="fas fa-handshake"></i>
+
+<h3>Customer Focused</h3>
+
+<p>Assistance throughout your search.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURED VEHICLES -->
+
+<section class="section featured">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>OUR COLLECTION</small>
+
+<h2>Featured Vehicles</h2>
+
+<p>Explore some of the automobiles showcased at STACK AUTO.</p>
+
+</div>
+
+
+<div class="car-grid">
+
+
+<!-- BLACK CAMRY -->
+
+<div class="car-card">
+
+<div class="car-image">
+
+<img src="images/black_camry.png"
+alt="Black Toyota Camry"
+loading="lazy">
+
+<span class="badge">FEATURED</span>
+
+</div>
+
+<div class="car-info">
+
+<div class="car-category">TOYOTA</div>
+
+<h3>Black Toyota Camry</h3>
+
+<p>
+Elegant design with a refined exterior
+and comfortable interior.
+</p>
+
+<div class="car-price">
+Contact for price
+</div>
+
+<a href="inventory.html" class="car-link">
+ENQUIRE ABOUT THIS CAR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- WHITE CAMRY -->
+
+<div class="car-card">
+
+<div class="car-image">
+
+<img src="images/white_camry.png"
+alt="White Toyota Camry"
+loading="lazy">
+
+<span class="badge">FEATURED</span>
+
+</div>
+
+<div class="car-info">
+
+<div class="car-category">TOYOTA</div>
+
+<h3>White Toyota Camry</h3>
+
+<p>
+A stylish sedan with an impressive
+road presence.
+</p>
+
+<div class="car-price">
+Contact for price
+</div>
+
+<a href="inventory.html" class="car-link">
+ENQUIRE ABOUT THIS CAR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- MERCEDES SUV -->
+
+<div class="car-card">
+
+<div class="car-image">
+
+<img src="images/mercedes_suv.png"
+alt="Mercedes-Benz SUV"
+loading="lazy">
+
+<span class="badge">PREMIUM</span>
+
+</div>
+
+<div class="car-info">
+
+<div class="car-category">MERCEDES-BENZ</div>
+
+<h3>Mercedes-Benz SUV</h3>
+
+<p>
+A premium SUV featuring distinctive
+styling and road presence.
+</p>
+
+<div class="car-price">
+Contact for price
+</div>
+
+<a href="inventory.html" class="car-link">
+ENQUIRE ABOUT THIS CAR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- WHITE SUV -->
+
+<div class="car-card">
+
+<div class="car-image">
+
+<img src="images/white_toyota.png"
+alt="White Toyota SUV"
+loading="lazy">
+
+<span class="badge">SUV</span>
+
+</div>
+
+<div class="car-info">
+
+<div class="car-category">TOYOTA</div>
+
+<h3>White Toyota SUV</h3>
+
+<p>
+A versatile SUV designed for everyday
+driving and comfort.
+</p>
+
+<div class="car-price">
+Contact for price
+</div>
+
+<a href="inventory.html" class="car-link">
+ENQUIRE ABOUT THIS CAR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- BLACK SEDAN -->
+
+<div class="car-card">
+
+<div class="car-image">
+
+<img src="images/black_sedan.png"
+alt="Black sedan"
+loading="lazy">
+
+<span class="badge">PREMIUM</span>
+
+</div>
+
+<div class="car-info">
+
+<div class="car-category">LUXURY SEDAN</div>
+
+<h3>Black Sedan</h3>
+
+<p>
+A sleek exterior with an elegant
+and sophisticated appearance.
+</p>
+
+<div class="car-price">
+Contact for price
+</div>
+
+<a href="inventory.html" class="car-link">
+ENQUIRE ABOUT THIS CAR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PORSCHE SHOWCASE -->
+
+<div class="car-card">
+
+<div class="car-image">
+
+<img src="images/porsche 911.png"
+alt="Porsche sports car showcase"
+loading="lazy">
+
+<span class="badge">SHOWCASE</span>
+
+</div>
+
+<div class="car-info">
+
+<div class="car-category">PERFORMANCE</div>
+
+<h3>Porsche Sports Car</h3>
+
+<p>
+An example of the performance and
+automotive design we admire.
+</p>
+
+<div class="car-price">
+Enquire for availability
+</div>
+
+<a href="inventory.html" class="car-link">
+EXPLORE OUR COLLECTION →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="view-all">
+
+<a href="inventory.html" class="btn btn-primary">
+VIEW ALL VEHICLES <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT US -->
+
+<section class="section about" id="about">
+
+<div class="container about-grid">
+
+
+<div class="about-image">
+
+<img src="images/home.png"
+alt="STACK AUTO dealership">
+
+</div>
+
+
+<div class="about-content">
+
+<small>ABOUT STACK AUTO</small>
+
+<h2>
+More Than Cars.<br>
+A <span>Better Experience.</span>
+</h2>
+
+<p>
+Welcome to STACK AUTO, your destination for quality
+automobiles and a customer-focused dealership experience.
+</p>
+
+<p>
+We offer brand-new and fairly used vehicles, giving
+customers different options to match their preferences
+and budgets.
+</p>
+
+<p>
+Whether you are looking for a stylish sedan, a spacious
+SUV or a premium automobile, our team is ready to assist.
+</p>
+
+
+<ul class="about-list">
+
+<li><i class="fas fa-check-circle"></i> Quality vehicle selection</li>
+
+<li><i class="fas fa-check-circle"></i> Brand-new and fairly used cars</li>
+
+<li><i class="fas fa-check-circle"></i> Different automobile categories</li>
+
+<li><i class="fas fa-check-circle"></i> Customer-focused assistance</li>
+
+</ul>
+
+
+<a href="inventory.html" class="btn btn-primary">
+EXPLORE OUR INVENTORY
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GALLERY -->
+
+<section class="section gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>OUR SHOWROOM</small>
+
+<h2>Inside STACK AUTO</h2>
+
+<p>
+Take a closer look at our dealership and vehicle collection.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+
+<img src="images/home.png"
+alt="STACK AUTO showroom"
+loading="lazy">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/black_sedan.png"
+alt="Black sedan"
+loading="lazy">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/mercedes_suv.png"
+alt="Mercedes SUV"
+loading="lazy">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/white_camry.png"
+alt="White Toyota Camry"
+loading="lazy">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/white_toyota.png"
+alt="White Toyota SUV"
+loading="lazy">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/black_camry.png"
+alt="Black Toyota Camry"
+loading="lazy">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="section why-us">
+
+<div class="container">
+
+<div class="section-heading">
+
+<small>THE STACK AUTO EXPERIENCE</small>
+
+<h2>Why Choose STACK AUTO?</h2>
+
+<p>
+We aim to make your automobile search easier.
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature-box">
+
+<i class="fas fa-car"></i>
+
+<h3>Vehicle Variety</h3>
+
+<p>
+Explore different vehicle categories,
+from elegant sedans to spacious SUVs.
+</p>
+
+</div>
+
+
+<div class="feature-box">
+
+<i class="fas fa-shield-alt"></i>
+
+<h3>Quality Focus</h3>
+
+<p>
+We focus on offering automobile options
+that meet different customer needs.
+</p>
+
+</div>
+
+
+<div class="feature-box">
+
+<i class="fas fa-headset"></i>
+
+<h3>Customer Assistance</h3>
+
+<p>
+Our team is available to assist you
+with your automobile enquiries.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<h2>
+Your Next Car Is <span>Waiting.</span>
+</h2>
+
+<p>
+Have a vehicle in mind? Contact STACK AUTO
+and let us help you with your enquiry.
+</p>
+
+<a href="https://wa.me/2348105001230"
+target="_blank"
+rel="noopener"
+class="btn btn-primary">
+
+<i class="fab fa-whatsapp"></i>
+CONTACT US ON WHATSAPP
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-about">
+
+<img src="images/logo.png"
+alt="STACK AUTO Logo"
+class="footer-logo">
+
+<p>
+STACK AUTO is your destination for quality
+automobiles. Explore our collection and
+discover your next vehicle.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>QUICK LINKS</h3>
+
+<a href="index.html">Home</a>
+
+<a href="inventory.html">Our Cars</a>
+
+<a href="#about">About Us</a>
+
+<a href="#gallery">Gallery</a>
+
+</div>
+
+
+<div>
+
+<h3>CONTACT</h3>
+
+<a href="#contact">Contact Us</a>
+
+<a href="inventory.html">Explore Vehicles</a>
+
+<a href="https://wa.me/2348105001230"
+target="_blank"
+rel="noopener">WhatsApp</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span> STACK AUTO.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://wa.me/2348105001230"
+target="_blank"
+rel="noopener"
+class="whatsapp-float"
+aria-label="Chat with STACK AUTO on WhatsApp">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// MOBILE MENU
+
+const menuBtn = document.getElementById("menuBtn");
+
+const navLinks = document.getElementById("navLinks");
+
+
+menuBtn.addEventListener("click", function() {
+
+    navLinks.classList.toggle("active");
+
+    const isOpen = navLinks.classList.contains("active");
+
+    menuBtn.innerHTML = isOpen
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+
+});
+
+
+// CLOSE MENU WHEN A LINK IS CLICKED
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
